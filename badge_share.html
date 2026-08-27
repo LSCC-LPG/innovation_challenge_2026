@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lattice GenAI Hackathon — Share Your Badge</title>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     OPEN GRAPH — read only by LinkedIn's crawler when it fetches this
+     page's own URL via sharing/share-offsite/?url=. Never seen by
+     employees; the crawler doesn't execute the script/body below.
+     ═══════════════════════════════════════════════════════════════ -->
+<meta property="og:type"        content="website" />
+<meta property="og:title"       content="Lattice AI Innovation Challenge" />
+<meta property="og:description" content="I participated in the Lattice GenAI Hackathon — LPG AI Innovation Challenge, an incredible experience exploring Generative AI innovations. #LatticeSemiconductor #GenAI #AIHackathon" />
+<meta property="og:image"       content="https://raw.githubusercontent.com/LSCC-LPG/innovation_challenge_2026/main/badge_preview_1200x630.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url"         content="https://lscc-lpg.github.io/innovation_challenge_2026/badge_share.html" />
+<meta name="twitter:card"       content="summary_large_image" />
+
+<style>
+:root {
+  --bg: #F4F6FA;
+  --surface: #FFFFFF;
+  --surface-2: #EEF1F7;
+  --border: #D5DAE6;
+  --text: #0D1421;
+  --text-2: #4F5769;
+  --text-3: #96A0B5;
+  --accent: #0054B4;
+  --accent-light: #E8F0FD;
+  --accent-hover: #003E8A;
+  --gold: #C9A84C;
+  --linkedin: #0A66C2;
+  --linkedin-hover: #004182;
+  --linkedin-tint: #E8F1FB;
+  --success: #166534;
+  --success-bg: #dcfce7;
+  --success-border: #86efac;
+  --danger: #B91C1C;
+  --sans: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  --r: 3px;
+  --overlay: rgba(10, 15, 30, 0.6);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B0F1A; --surface: #121828; --surface-2: #1A2236; --border: #242E45;
+    --text: #DDE4F0; --text-2: #8592AD; --text-3: #4D5870;
+    --accent: #4A8FF5; --accent-light: #0D1E3A; --accent-hover: #6BA3F8;
+    --linkedin: #4A8FF5; --linkedin-hover: #6BA3F8; --linkedin-tint: #0D1E3A;
+    --success: #22c55e; --success-bg: #052e16; --success-border: #166534;
+    --danger: #F87171; --overlay: rgba(0,0,0,0.78);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0F1A; --surface: #121828; --surface-2: #1A2236; --border: #242E45;
+  --text: #DDE4F0; --text-2: #8592AD; --text-3: #4D5870;
+  --accent: #4A8FF5; --accent-light: #0D1E3A; --accent-hover: #6BA3F8;
+  --linkedin: #4A8FF5; --linkedin-hover: #6BA3F8; --linkedin-tint: #0D1E3A;
+  --success: #22c55e; --success-bg: #052e16; --success-border: #166534;
+  --danger: #F87171; --overlay: rgba(0,0,0,0.78);
+}
+:root[data-theme="light"] {
+  --bg: #F4F6FA; --surface: #FFFFFF; --surface-2: #EEF1F7; --border: #D5DAE6;
+  --text: #0D1421; --text-2: #4F5769; --text-3: #96A0B5;
+  --accent: #0054B4; --accent-light: #E8F0FD; --accent-hover: #003E8A;
+  --linkedin: #0A66C2; --linkedin-hover: #004182; --linkedin-tint: #E8F1FB;
+  --success: #166534; --success-bg: #dcfce7; --success-border: #86efac;
+  --danger: #B91C1C; --overlay: rgba(10,15,30,0.6);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--sans); background: var(--bg); color: var(--text); min-height: 100vh; padding: 48px 20px 96px; line-height: 1.5; }
+
+/* ── Page header & form ── */
+.site-header { max-width: 520px; margin: 0 auto 40px; display: flex; align-items: flex-end; gap: 14px; }
+.wordmark { display: flex; flex-direction: column; gap: 1px; }
+.wordmark-company { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); }
+.wordmark-product { font-size: 17px; font-weight: 700; color: var(--text); letter-spacing: -0.025em; line-height: 1; }
+.header-rule { flex: 1; height: 1px; background: var(--border); margin-bottom: 3px; }
+.page-intro { max-width: 520px; margin: 0 auto 24px; }
+.page-intro h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.03em; color: var(--text); text-wrap: balance; margin-bottom: 6px; line-height: 1.2; }
+.page-intro p { font-size: 14px; color: var(--text-2); line-height: 1.65; max-width: 460px; }
+.form-card { max-width: 520px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 28px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+label { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-2); }
+input[type="text"] { width: 100%; padding: 10px 12px; font-family: var(--sans); font-size: 14px; color: var(--text); background: var(--bg); border: 1px solid var(--border); border-radius: var(--r); outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
+input[type="text"]:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+input[type="text"]::placeholder { color: var(--text-3); }
+.form-footer { margin-top: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.error-msg { font-size: 13px; color: var(--danger); display: none; flex: 1; }
+.error-msg.visible { display: block; }
+.btn-primary { padding: 10px 22px; font-family: var(--sans); font-size: 13px; font-weight: 600; color: #fff; background: var(--accent); border: 1px solid transparent; border-radius: var(--r); cursor: pointer; letter-spacing: 0.01em; transition: background 0.15s; white-space: nowrap; }
+.btn-primary:hover { background: var(--accent-hover); }
+
+/* ── Modal overlay ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0;
+  background: var(--overlay); z-index: 100;
+  align-items: center; justify-content: center; padding: 20px;
+  backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px);
+}
+.modal-overlay.open { display: flex; }
+
+/* ── Modal card ── */
+.modal-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; width: 100%; max-width: 440px; position: relative;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.12);
+}
+.modal-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, #e8c96e 50%, var(--gold) 100%);
+}
+.modal-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 50%;
+  cursor: pointer; font-size: 16px; line-height: 1; color: var(--text-3);
+  transition: color 0.15s, border-color 0.15s; z-index: 1;
+}
+.modal-close:hover { color: var(--text); border-color: var(--text-2); }
+
+/* ── Badge image ── */
+.modal-badge-section { padding: 28px 28px 0; }
+.modal-badge-wrap { border-radius: 4px; overflow: hidden; border: 1px solid var(--border); }
+.modal-badge-wrap img { width: 100%; height: auto; display: block; }
+
+/* ── Participant name ── */
+.modal-participant { padding: 14px 28px 0; display: flex; flex-direction: column; gap: 2px; }
+.modal-participant-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); }
+.modal-participant-name { font-size: 16px; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+
+/* ── Action buttons ── */
+.modal-actions { padding: 18px 28px 0; display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-copy-badge {
+  flex: 1; min-width: 120px; padding: 11px 18px;
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  color: #fff; background: var(--accent); border: 1px solid transparent;
+  border-radius: var(--r); cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  transition: background 0.15s; white-space: nowrap;
+}
+.btn-copy-badge:hover { background: var(--accent-hover); }
+.btn-copy-badge.copied { background: #166534; border-color: #166534; }
+.btn-li-modal {
+  flex: 1; min-width: 120px; padding: 11px 18px;
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  color: var(--linkedin); background: transparent;
+  border: 1px solid var(--linkedin); border-radius: var(--r);
+  cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  transition: background 0.15s; white-space: nowrap;
+}
+.btn-li-modal:hover { background: var(--linkedin-tint); }
+.li-icon { width: 15px; height: 15px; fill: currentColor; flex-shrink: 0; }
+
+/* ── Steps ── */
+.modal-steps { padding: 16px 28px 0; display: flex; flex-direction: column; gap: 8px; }
+.step-row { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text-2); }
+.step-num {
+  flex-shrink: 0; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--surface-2); border: 1px solid var(--border);
+  font-size: 11px; font-weight: 700; color: var(--text-3);
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.step-row.active .step-num { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+.step-row.done .step-num { background: var(--success-bg); border-color: var(--success-border); color: var(--success); }
+kbd {
+  display: inline-block; padding: 1px 5px; font-family: var(--mono); font-size: 11px;
+  background: var(--surface-2); border: 1px solid var(--border); border-radius: 3px; color: var(--text-2);
+}
+
+/* ── Notice ── */
+.modal-notice {
+  margin: 14px 28px 28px; padding: 0;
+  font-size: 12.5px; line-height: 1.55;
+  background: var(--success-bg); color: var(--success);
+  border: 1px solid var(--success-border); border-radius: var(--r);
+  overflow: hidden; max-height: 0;
+  transition: max-height 0.25s ease, padding 0.2s ease;
+}
+.modal-notice.visible { max-height: 100px; padding: 10px 14px; }
+.modal-notice.warn { background: #fefce8; color: #854d0e; border-color: #fde047; }
+:root[data-theme="dark"] .modal-notice.warn,
+@media (prefers-color-scheme: dark) { .modal-notice.warn { background: #1c1402; color: #fde68a; border-color: #854d0e; } }
+
+/* ── Hint line ── */
+.modal-hint {
+  padding: 0 28px 24px;
+  font-size: 13px; color: var(--text-2); line-height: 1.55;
+}
+.modal-hint strong { color: var(--text); }
+.modal-hint a { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (max-width: 480px) {
+  body { padding: 32px 16px 64px; }
+  .modal-badge-section, .modal-participant, .modal-actions, .modal-steps { padding-left: 20px; padding-right: 20px; }
+  .modal-notice { margin-left: 20px; margin-right: 20px; margin-bottom: 20px; }
+  .modal-actions { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wordmark">
+    <span class="wordmark-company">Lattice Semiconductor</span>
+    <span class="wordmark-product">LPG AI Innovation Challenge</span>
+  </div>
+  <div class="header-rule"></div>
+</header>
+
+<div class="page-intro">
+  <h1>Share your hackathon badge</h1>
+  <p>Enter your name to generate your participation badge for the Lattice GenAI Hackathon, then share it directly on LinkedIn.</p>
+</div>
+
+<div class="form-card">
+  <div class="field">
+    <label for="employee-name">Full Name</label>
+    <input type="text" id="employee-name" placeholder="e.g. Jane Smith" autocomplete="name" />
+  </div>
+  <div class="form-footer">
+    <p class="error-msg" id="error-msg" role="alert">Please enter your full name.</p>
+    <button class="btn-primary" id="generate-btn">Generate Badge</button>
+  </div>
+</div>
+
+<!-- ── Badge modal ── -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-participant-name">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+    <div class="modal-badge-section">
+      <div class="modal-badge-wrap">
+        <img id="badge-img" src="https://raw.githubusercontent.com/LSCC-LPG/innovation_challenge_2026/main/logo.png" alt="Lattice GenAI Hackathon Badge" />
+      </div>
+    </div>
+
+    <div class="modal-participant">
+      <span class="modal-participant-label">Participant</span>
+      <span class="modal-participant-name" id="modal-participant-name"></span>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn-copy-badge" id="copy-text-btn">
+        <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <rect x="7" y="7" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M13 7V4.5A1.5 1.5 0 0 0 11.5 3h-8A1.5 1.5 0 0 0 2 4.5v11A1.5 1.5 0 0 0 3.5 17H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Copy Post Text
+      </button>
+      <a class="btn-li-modal" id="li-share-btn" href="#" target="_blank" rel="noopener noreferrer">
+        <svg class="li-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        Share on LinkedIn
+      </a>
+    </div>
+
+    <div class="modal-steps">
+      <div class="step-row active" id="step-1">
+        <span class="step-num">1</span>
+        <span>Click <strong>Copy Post Text</strong> to copy your personalised message.</span>
+      </div>
+      <div class="step-row" id="step-2">
+        <span class="step-num">2</span>
+        <span>Click <strong>Share on LinkedIn</strong> — your badge should appear automatically as a preview card.</span>
+      </div>
+      <div class="step-row" id="step-3">
+        <span class="step-num">3</span>
+        <span>In LinkedIn, press <kbd>Ctrl+V</kbd> to paste your text, then click <strong>Post</strong>.</span>
+      </div>
+    </div>
+
+    <div class="modal-notice" id="modal-notice"></div>
+    <p class="modal-hint">If the badge preview does not appear, you can still <a href="#" id="fallback-download-link">download the badge</a> and attach it manually via the LinkedIn image icon.</p>
+  </div>
+</div>
+
+<script>
+const EVENT_NAME = 'Lattice GenAI Hackathon — LPG AI Innovation Challenge';
+const BADGE_URL = 'https://raw.githubusercontent.com/LSCC-LPG/innovation_challenge_2026/main/logo.png';
+const BADGE_PAGE_URL = 'https://lscc-lpg.github.io/innovation_challenge_2026/badge_share.html';
+const COPY_ICON = '<svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="7" y="7" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M13 7V4.5A1.5 1.5 0 0 0 11.5 3h-8A1.5 1.5 0 0 0 2 4.5v11A1.5 1.5 0 0 0 3.5 17H7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>';
+const CHECK_ICON = '<svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+let currentShareText = '';
+
+// ── Generate badge ──
+function generateBadge(name) {
+  currentShareText = 'I am excited to share that I participated in the ' + EVENT_NAME
+    + ', hosted by Lattice LPG! It was an incredible experience exploring Generative AI innovations.'
+    + ' #LatticeSemiconductor #GenAI #AIHackathon #LPG #Innovation';
+
+  // share-offsite causes LinkedIn to crawl BADGE_PAGE_URL for og:image,
+  // showing the badge automatically as a link preview card.
+  const liUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(BADGE_PAGE_URL);
+
+  document.getElementById('modal-participant-name').textContent = name;
+  document.getElementById('li-share-btn').href = liUrl;
+
+  // Reset steps and notice
+  ['step-1', 'step-2', 'step-3'].forEach(function (id, i) {
+    document.getElementById(id).className = 'step-row' + (i === 0 ? ' active' : '');
+  });
+  const notice = document.getElementById('modal-notice');
+  notice.textContent = ''; notice.className = 'modal-notice';
+
+  const copyBtn = document.getElementById('copy-text-btn');
+  copyBtn.innerHTML = COPY_ICON + ' Copy Post Text';
+  copyBtn.classList.remove('copied');
+
+  document.getElementById('modal-overlay').classList.add('open');
+  copyBtn.focus();
+}
+
+// ── Generate button ──
+document.getElementById('generate-btn').addEventListener('click', function () {
+  const name = document.getElementById('employee-name').value.trim();
+  const errEl = document.getElementById('error-msg');
+  if (!name) { errEl.classList.add('visible'); return; }
+  errEl.classList.remove('visible');
+  generateBadge(name);
+});
+
+// ── Auto-generate when ?name= is in the URL (for email links) ──
+document.addEventListener('DOMContentLoaded', function () {
+  const urlName = new URLSearchParams(window.location.search).get('name');
+  if (urlName && urlName.trim()) {
+    document.getElementById('employee-name').value = urlName.trim();
+    generateBadge(urlName.trim());
+  }
+});
+
+// ── Close modal ──
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', function (e) {
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ── Copy Post Text ──
+document.getElementById('copy-text-btn').addEventListener('click', function () {
+  const btn = this;
+  const notice = document.getElementById('modal-notice');
+
+  function onSuccess() {
+    btn.innerHTML = CHECK_ICON + ' Text Copied';
+    btn.classList.add('copied');
+    document.getElementById('step-1').className = 'step-row done';
+    document.getElementById('step-2').className = 'step-row active';
+    notice.className = 'modal-notice visible';
+    notice.innerHTML = 'Post text copied! Now click <strong>Share on LinkedIn</strong>.';
+  }
+
+  function onFallback() {
+    notice.className = 'modal-notice visible warn';
+    notice.innerHTML = 'Could not copy automatically. Please select and copy the text manually, then click <strong>Share on LinkedIn</strong>.';
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(currentShareText).then(onSuccess).catch(onFallback);
+  } else {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = currentShareText;
+      ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      onSuccess();
+    } catch (e) { onFallback(); }
+  }
+});
+
+// ── Share on LinkedIn ──
+document.getElementById('li-share-btn').addEventListener('click', function () {
+  document.getElementById('step-2').className = 'step-row done';
+  document.getElementById('step-3').className = 'step-row active';
+  const notice = document.getElementById('modal-notice');
+  notice.className = 'modal-notice visible';
+  notice.innerHTML = 'LinkedIn is opening — your badge should appear as a preview card. Paste your text (<kbd>Ctrl+V</kbd>) and click <strong>Post</strong>.';
+});
+
+// ── Fallback: manual download, in case the preview card does not appear ──
+document.getElementById('fallback-download-link').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  function saveBlob(blob) {
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = objectUrl;
+    a.download = 'Lattice_GenAI_Hackathon_Badge.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(objectUrl);
+  }
+
+  // raw.githubusercontent.com serves this file with Access-Control-Allow-Origin: *,
+  // so fetch() works cross-origin and gives us a real Blob with a guaranteed filename,
+  // instead of relying on the less reliable cross-origin anchor download attribute.
+  fetch(BADGE_URL)
+    .then(function (r) { return r.blob(); })
+    .then(saveBlob)
+    .catch(function () {
+      const a = document.createElement('a');
+      a.href = BADGE_URL;
+      a.download = 'Lattice_GenAI_Hackathon_Badge.png';
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+});
+</script>
+</body>
+</html>
