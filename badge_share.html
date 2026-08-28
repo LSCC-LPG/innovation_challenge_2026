@@ -217,10 +217,11 @@ kbd {
 
 <div class="page-intro">
   <h1>Share your hackathon badge</h1>
-  <p>Enter your name to generate your participation badge for the Lattice GenAI Hackathon, then share it directly on LinkedIn.</p>
+  <p id="page-intro-text">Enter your name to generate your participation badge for the Lattice GenAI Hackathon, then share it directly on LinkedIn.</p>
 </div>
 
-<div class="form-card">
+<!-- ── Shown to confirmed participants who have a valid invite link ── -->
+<div class="form-card" id="form-card" style="display:none;">
   <div class="field">
     <label for="employee-name">Full Name</label>
     <input type="text" id="employee-name" placeholder="e.g. Jane Smith" autocomplete="name" />
@@ -229,6 +230,14 @@ kbd {
     <p class="error-msg" id="error-msg" role="alert">Please enter your full name.</p>
     <button class="btn-primary" id="generate-btn">Generate Badge</button>
   </div>
+</div>
+
+<!-- ── Shown to anyone reaching this page without a valid invite link (e.g. via the LinkedIn preview card) ── -->
+<div class="form-card" id="locked-card">
+  <div class="modal-badge-wrap" style="max-width:220px; margin:0 auto 20px;">
+    <img src="https://raw.githubusercontent.com/LSCC-LPG/innovation_challenge_2026/main/logo.png" alt="Lattice GenAI Hackathon Badge" style="width:100%; height:auto; display:block; border-radius:4px;" />
+  </div>
+  <p style="text-align:center; font-size:14px; color:var(--text-2); line-height:1.6;">This badge is awarded to confirmed participants of the Lattice GenAI Hackathon — LPG AI Innovation Challenge. If you took part and haven't received your personal badge link, please contact the event organizers.</p>
 </div>
 
 <!-- ── Badge modal ── -->
@@ -327,9 +336,29 @@ document.getElementById('generate-btn').addEventListener('click', function () {
   generateBadge(name);
 });
 
-// ── Auto-generate when ?name= is in the URL (for email links) ──
+// ── Invite gate ──
+// The generator form only appears for links carrying the correct invite
+// code, so a colleague clicking the LinkedIn preview card lands on the
+// plain, non-interactive badge display instead — this badge is earned by
+// attending the event, not something anyone reaching this URL can claim.
+// This is a client-side deterrent, not real security: change INVITE_CODE
+// before distributing personal links, and keep it out of any public post.
+const INVITE_CODE = 'LPG2026';
+
 document.addEventListener('DOMContentLoaded', function () {
-  const urlName = new URLSearchParams(window.location.search).get('name');
+  const params = new URLSearchParams(window.location.search);
+  const hasInvite = params.get('invite') === INVITE_CODE;
+
+  if (!hasInvite) {
+    document.getElementById('page-intro-text').textContent =
+      'This badge is awarded to confirmed participants of the Lattice GenAI Hackathon.';
+    return;
+  }
+
+  document.getElementById('form-card').style.display = '';
+  document.getElementById('locked-card').style.display = 'none';
+
+  const urlName = params.get('name');
   if (urlName && urlName.trim()) {
     document.getElementById('employee-name').value = urlName.trim();
     generateBadge(urlName.trim());
